@@ -1,0 +1,2 @@
+1.导入工程后先进入config包下的MybatisConfig类下修改数据库账号密码
+2.导入sql文件前先建立数据库，名字为onlinelearning
