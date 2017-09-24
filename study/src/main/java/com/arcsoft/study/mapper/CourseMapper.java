@@ -79,8 +79,8 @@ public interface CourseMapper {
             @Result(property = "description", column = "description"),
             @Result(property = "typeName", column = "typeName"), @Result(property = "typeId", column = "typeId"),
             @Result(property = "parentTypeId", column = "parentTypeId"),
-            @Result(property = "groups", column = "id", many = @Many(select = "com.arcsoft.mapper.CourseMapper.getCourseGroup")),
-            @Result(property = "members", column = "id", many = @Many(select = "com.arcsoft.mapper.CourseMapper.getCourseEmployee")) })
+            @Result(property = "groups", column = "id", many = @Many(select = "com.arcsoft.study.mapper.CourseMapper.getCourseGroup")),
+            @Result(property = "members", column = "id", many = @Many(select = "com.arcsoft.study.mapper.CourseMapper.getCourseEmployee")) })
     List<Map> findCourseByTeacher(Long lecturerId);
 
     @Select("select group_id as id from course_group where course_id=#{courseId}")

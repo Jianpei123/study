@@ -36,9 +36,11 @@ public interface GroupMapper {
     List<Long> getEmployeeByGroup(@Param("groupId") Long groupId);
 
     @Select("select * from groups where creator_id=#{id}")
-    @Results({ @Result(id = true, property = "id", column = "id"), @Result(property = "name", column = "name"),
+    @Results({ 
+    		@Result(id = true, property = "id", column = "id"), 
+    		@Result(property = "name", column = "name"),
             @Result(property = "creatorId", column = "creator_id"),
-            @Result(column = "id", property = "members", many = @Many(select = "com.arcsoft.mapper.GroupMapper.getEmployeeByGroup")) })
+            @Result(column = "id", property = "members", many = @Many(select = "com.arcsoft.study.mapper.GroupMapper.getEmployeeByGroup")) })
     List<Map> getMyGroup(Employee employee);
 
     @Select("select e.id from employee e left join group_employee ge on e.id=ge.employee_id where ge.group_id in (${groupsId})")

@@ -45,7 +45,8 @@ public class GroupController {
 
     @RequestMapping("/getMyGroup")
     public List<Map> getMyGroup(Employee employee, HttpSession httpSession, Integer pageNum) {
-        employee.setId((Long) httpSession.getAttribute("adminId"));
+    	employee.setId((Long) httpSession.getAttribute("adminId"));
+    	System.out.println(httpSession.getAttribute("adminId"));
         if (pageNum != null) {
             Page<Object> page = PageHelper.startPage(pageNum, Constant.pageSize);
             List<Map> result = groupService.getMyGroup(employee);

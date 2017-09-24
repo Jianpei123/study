@@ -25,7 +25,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // TODO 自动生成的方法存根
-//        registry.addInterceptor(new SessionTimeoutInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new SessionTimeoutInterceptor()).addPathPatterns("/**");
         super.addInterceptors(registry);
     }
 }

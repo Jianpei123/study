@@ -33,7 +33,7 @@ public interface EmployeeMapper {
 
     @Select("select id,name from department")
     @Results({ @Result(id = true, property = "id", column = "id"), @Result(property = "name", column = "name"),
-            @Result(property = "members", column = "id", many = @Many(select = "com.arcsoft.mapper.EmployeeMapper.getEmployeeByDepartment")) })
+            @Result(property = "members", column = "id", many = @Many(select = "com.arcsoft.study.mapper.EmployeeMapper.getEmployeeByDepartment")) })
     List<Map> getEmployeeGroupByDepartment();
 
     /**

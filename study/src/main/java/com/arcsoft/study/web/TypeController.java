@@ -43,7 +43,7 @@ public class TypeController {
         result.add(total);
         return result;
     }
-
+    
     @RequestMapping("/updateType")
     public int updateType(Type type) {
         return typeSercie.updateType(type);

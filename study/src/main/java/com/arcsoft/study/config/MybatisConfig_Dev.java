@@ -1,10 +1,11 @@
 package com.arcsoft.study.config;
 
-import java.beans.PropertyVetoException;
 import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.Configuration;
@@ -12,35 +13,27 @@ import org.apache.ibatis.transaction.TransactionFactory;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 import com.github.pagehelper.PageInterceptor;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
-
+@Profile("dev")
 @org.springframework.context.annotation.Configuration
-public class MybatisConfig {
+public class MybatisConfig_Dev {
     /*
      * 配置dataSouce
      */
     @Bean(destroyMethod = "close")
     public DataSource dataSource() {
-        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
-        try {
-            comboPooledDataSource.setUser("root");
-//            comboPooledDataSource.setPassword("root");
-            comboPooledDataSource.setPassword("As1995817.");
-            comboPooledDataSource.setJdbcUrl(
-                    "jdbc:mysql://localhost:3306/onlinelearning?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true");
-            comboPooledDataSource.setDriverClass("com.mysql.jdbc.Driver");
-            comboPooledDataSource.setInitialPoolSize(20);
-            comboPooledDataSource.setMaxPoolSize(10);
-            comboPooledDataSource.setMinPoolSize(5);
-        } catch (PropertyVetoException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return comboPooledDataSource;
+    	BasicDataSource basicDataSource = new BasicDataSource();
+            basicDataSource.setUsername("root");
+            basicDataSource.setPassword("123qwe");
+            basicDataSource.setUrl(
+                    "jdbc:mysql://localhost/onlinelearning?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=true&verifyServerCertificate=false");
+            basicDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+            basicDataSource.setInitialSize(5);
+        return basicDataSource;
     }
-
+  
     /*
      * 配置sqlSessionFactory
      */

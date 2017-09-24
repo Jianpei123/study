@@ -19,10 +19,10 @@ public class SessionTimeoutInterceptor implements HandlerInterceptor {
         if (session != null) {
             return true;
         }
-        
         else if (request.getRequestURL().toString().contains("login")) {
                 return true;
-            } else {
+        } 
+        else {
                 response.setContentType("application/json;charset=UTF-8");
                 PrintWriter out = response.getWriter();
                 out.println("{\"timeout\":true}");
