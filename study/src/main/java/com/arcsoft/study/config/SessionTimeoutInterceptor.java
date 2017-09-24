@@ -16,10 +16,11 @@ public class SessionTimeoutInterceptor implements HandlerInterceptor {
             throws Exception {
         // TODO 自动生成的方法存根
         HttpSession session = request.getSession(false);
+        String url=request.getRequestURL().toString();
         if (session != null) {
             return true;
         }
-        else if (request.getRequestURL().toString().contains("login")) {
+        else if (url.contains("login")||url.contains("user")) {
                 return true;
         } 
         else {
