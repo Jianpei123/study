@@ -2,6 +2,13 @@
 
 api说明文档
 
+## 用户登录
+
+url | 参数 | 说明
+--------- | ---- | -----------
+user/login | email,password | 后端会返回相应信息，请注意输出
+user/register | email,username,password | 后端会返回相应信息，请注意输出
+
 ## 首页相关
 
 url | 参数 | 说明
@@ -16,5 +23,3 @@ user/getCourseByName | name | 根据名字搜索课程
 url | 参数 | 说明
 --------- | ---- | -----------
 user/getChaptersByCourse | courseId | 获取目录
-
-
