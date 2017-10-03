@@ -1,7 +1,7 @@
 # study  
 ### 首页相关  
 
-<table text-align:center>
+<table style="text-align:center">
   <tr >
     <th width="20%">
       url
