@@ -40,6 +40,7 @@ api说明文档
 
 ## 课程详情相关
 url | 参数 | 说明
+--------- | ---- | -----------
 user/getChaptersByCourse | courseId | 获取目录
 
 
