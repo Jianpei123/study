@@ -1,6 +1,7 @@
 # study  
 ### 首页相关  
-<table>
+
+<table align="center">
   <tr >
     <th width="20%">
       url
@@ -33,5 +34,6 @@
     <td>根据名字搜索课程</td>
   </tr>
 </table>
+
 ### 课程详情相关  
 * user/getChaptersByCourse?courseId     参数courseId  获取目录
