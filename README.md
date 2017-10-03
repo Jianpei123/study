@@ -1,5 +1,8 @@
 # study  
-### 首页相关  
+
+api说明文档
+
+## 首页相关  
 
 <table style="text-align:center">
   <tr >
@@ -35,5 +38,8 @@
   </tr>
 </table>
 
-### 课程详情相关  
-* user/getChaptersByCourse?courseId     参数courseId  获取目录
+## 课程详情相关  
+
+url | 参数 | 说明 
+- | :-: | :-:
+user/getChaptersByCourse?courseId | courseId | 获取目录
