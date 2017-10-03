@@ -28,7 +28,7 @@
     <td>获取课程详情</td>
   </tr>
   <tr>
-    <td>getCourseByNam</td>
+    <td>user/getCourseByName</td>
     <td>name</td>
     <td>根据名字搜索课程</td>
   </tr>
