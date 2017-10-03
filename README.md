@@ -9,3 +9,5 @@ when parentTypeId=1,the server will response:
 user/getCourseByType?typeId=         参数typeId   获取二级分类下的课程
 
 user/getCourseById?courseId=         参数courseId   获取课程详情
+
+user/getCourseByName?name=           参数name     根据名字搜索课程【用于搜索模块】
