@@ -43,3 +43,5 @@ api说明文档
 url | 参数 | 说明 
 - | :-: | :-:
 user/getChaptersByCourse?courseId | courseId | 获取目录
+
+
