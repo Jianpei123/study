@@ -23,3 +23,9 @@ user/getCourseByName | name | 根据名字搜索课程
 url | 参数 | 说明
 --------- | ---- | -----------
 user/getChaptersByCourse | courseId | 获取目录
+
+## 购物车相关
+
+url | 参数 | 说明
+--------- | ---- | -----------
+user/addOrder | {"userId":1,"courses":[{"id":1,"price":1.2},{"id":2,"price":1.22}]} | 请使用post方法传递一个如同参数格式的json对象
