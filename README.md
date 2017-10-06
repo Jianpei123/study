@@ -29,3 +29,4 @@ user/getChaptersByCourse | courseId | 获取目录
 url | 参数 | 说明
 --------- | ---- | -----------
 user/addOrder | {"userId":1,"courses":[{"id":1,"price":1.2},{"id":2,"price":1.22}]} | 请使用post方法传递一个如同参数格式的json对象
+user/getOrderByUser | userId | 获取历史订单
