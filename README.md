@@ -23,6 +23,8 @@ user/getCourseByName | name | 根据名字搜索课程
 url | 参数 | 说明
 --------- | ---- | -----------
 user/getChaptersByCourse | courseId | 获取目录
+user/getMyCourse | userId | 获取已购买课程
+
 
 ## 购物车相关
 
