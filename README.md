@@ -30,3 +30,5 @@ url | 参数 | 说明
 --------- | ---- | -----------
 user/addOrder | {"userId":1,"courses":[{"id":1,"price":1.2},{"id":2,"price":1.22}]} | 请使用post方法传递一个如同参数格式的json对象
 user/getOrderByUser | userId | 获取历史订单
+user/addToCart | courseId | 添加课程进购物车
+user/getMyCart |  | 显示购物车信息
